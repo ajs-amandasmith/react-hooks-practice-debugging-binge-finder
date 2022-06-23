@@ -7,7 +7,7 @@ function Search(props) {
       <Input
         type="text"
         placeholder="Search"
-        onChange={props.handleSearch}
+        onChange={e => props.handleSearch(e)}
         value={props.search}
       />
     </div>

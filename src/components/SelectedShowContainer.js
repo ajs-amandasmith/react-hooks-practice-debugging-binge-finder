@@ -3,7 +3,6 @@ import Episode from "./Episode";
 
 function SelectedShowContainer(props) {
   const selectedSeason = useState(1);
-  console.log('episodes', props.allEpisodes)
 
   function mapSeasons() {
     if (!!props.episodes) {
