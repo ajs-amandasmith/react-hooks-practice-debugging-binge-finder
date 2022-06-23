@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Episode from "./Episode";
 
 function SelectedShowContainer(props) {
-  const selectedSeason = useState(1);
+  const [selectedSeason, setSelectedSeason] = useState(1);
 
   function mapSeasons() {
-    if (!!props.episodes) {
-      let seasons = props.episodes.map((e) => e.season).unique();
+    if (!!props.allEpisodes) {
+      let seasons = props.allEpisodes.map((e) => e.season).unique();
 
       return seasons.map((s) => {
         return (
@@ -27,7 +27,8 @@ function SelectedShowContainer(props) {
   }
 
   function handleSelectionChange(e) {
-    selectedSeason = e.target.value;
+    setSelectedSeason(e.target.value);
+  
   }
 
   const { selectedShow } = props;
