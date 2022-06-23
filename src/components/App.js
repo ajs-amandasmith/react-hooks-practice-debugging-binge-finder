@@ -35,12 +35,13 @@ function App() {
       setSelectedShow(show);
       setEpisodes(episodes);
     });
+    
   }
 
   let displayShows = shows;
   if (filterByRating) {
     displayShows = displayShows.filter((s) => {
-      s.rating.average >= filterByRating;
+      return s.rating.average >= filterByRating;
     });
   }
 
